@@ -1,0 +1,68 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block main %}
+
+<h1 class="pageTitle">Tecnologias</h1>
+
+    <div class="container">
+        {%for programming_languages in programming_languages %}
+        <div class="classes">
+            <a class = "title_class" href = "{{programming_languages.link_wiki}}">
+                <h2>{{programming_languages.name}}</h2>
+                    <br>
+                    <p class = "text_tec">{{programming_languages.description}}</p>
+                </h2>
+                <div>
+                    <img src="{{programming_languages.image.url}}" id="image_school">
+                </div>
+            </a>
+        </div>
+        {%endfor%}
+    </div>
+    
+
+<h1 class="pageTitle">Noticias</h1>
+        <div class= 'container'>
+            {%for noticias in noticias%}  
+            <div class = "project_container">
+                <a class = "title_class" href = "{{noticias.link_news}}"><h2 class = "class_projects">"{{noticias.title}}"</h2></a>
+                    <div>
+                        <img src="{{noticias.image.url}}" id="imagesProject">
+                    </div>
+                    <div class = "project_participants">
+                        <p>{{noticias.text}}</p>
+                    </div>
+            </div>
+            {%endfor%}
+        </div>
+            
+
+
+        
+<h1 class="pageTitle">Quizz</h1>
+<div class="container">
+
+
+    <div class="quizz">
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+                <p>Insira o seu nome<input type="text" name="name">
+                <p>O que significa HTML?<input type="text" name="question1" value="text default">
+                <p>CSS significa Cascading Style Sinal<input type="checkbox" name="question2" value="text default">
+                <p>Django é uma framework para desenvolvimento rápido para web<input type="checkbox" name="question3" value="a&#x03C9;b">
+                <p>Em que ano foi lançado a framework Django?<input type="text" name="question4">
+                <p>A ultima versão disponível de HTML até agora é o HTML5<input type="checkbox" name="question5">
+                
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="graphs">
+        {% load static %}
+        <img src="/static/portfolio/images/final_graphic.png">
+    </div>
+
+
+</div>
+
+{% endblock %}

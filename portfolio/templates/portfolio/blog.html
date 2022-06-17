@@ -1,0 +1,18 @@
+{% extends 'portfolio/layout.html' %}
+    {% block main %}
+
+    <div class="container">
+        <div class = "blog_div">
+            {% for blog in posts %}
+                <p> 
+                {{ blog.author}}
+                {{ blog.description}}
+                    <a href="{% url 'portfolio:editBlog' blog.id %}" class = "blog_button">Editar</a>
+                    <a href="{% url 'portfolio:deleteBlog' blog.id%}" class = "blog_button">Apagar</a>
+                </p>
+                {% endfor %}
+                    <a href="{% url 'portfolio:newBlog' %}" class = "blog_button">Novo</a>
+                
+        </div>
+    </div>
+    {% endblock %}

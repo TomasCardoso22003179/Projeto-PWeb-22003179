@@ -1,0 +1,128 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block main %}
+        
+
+    <h1 class="pageTitle">Licenciatura</h1>
+        <div class="container">
+            {%for subjects in subject %}  
+            <div class="classes"> 
+                <a class = "title_class" href = {{subjects.link_lusofona}}>
+                    <h2>{{subjects.name}}</h2>
+                    <p>{{subjects.year}}º ano do {{subjects.semester}}º Semestre</p>
+                </a>
+                    <div class="subject_div">
+                        <h3>{{subjects.etcs}} ects</h3>
+                        <h3>Rank (1-5) : {{subjects.ranking}} </h3>
+                    </div>
+                        <div class="subject_description">
+                            <p>{{subjects.description}}</p> 
+                        </div>
+                        <div class = "subject_teacher">
+                            <h2 id = "prof_id">Professores</h2>
+                            {%for teachers in subjects.teacher.all%}
+                                <p id = "teacher_name">{{teachers.name}}</p>
+                                <a class = "button_link" href="{{teachers.link_lusofona}}">Página Lusofona</a> 
+                                <a class = "button_link" href="{{teachers.link_linkedin}}">LinkedIn</a>
+                                
+                            {%endfor%}
+                            <a href="{% url 'portfolio:edit_subject' subject.id %}" class = "blog_button">Editar</a>
+                        </div>
+            </div>
+            {%endfor%}      
+        </div>
+
+
+        <h1 class = "pageTitle">Educação</h2>
+
+            <div class="container">
+                {%for schools in school %}
+                <div class="container_school">
+                    <a class = "title_class" href = {{subjects.link_lusofona}}>
+                        <h2>{{schools.name}}
+                            <h4>Ingressei de {{schools.start_date}} até {{schools.end_date}}</h4>
+                        </h2>
+                        <div class = "div_school">
+                            <img src="{{schools.image.url }}" id="image_school">
+                        </div>
+                    </a>
+                </div>
+                {%endfor%}
+            </div>
+            
+            <h1 class = "pageTitle">Aptidões</h1>
+                <h2 class = "title_class">Aptidões Linguisticas</h2>
+                <div class = "container">
+                    {%for skills in skill %}
+                    {%if skills.skill_number == 1%}
+                    <div class = "skills_container">
+                        <h1 class = "title_skills">{{skills.title}}</h1>
+                        <p class = "text_skills">{{skills.text}}</p>
+                    </div>
+                    {%endif%}
+                    {%endfor%}
+                </div>
+
+                <h1 class = "pageTitle">Aptidões</h1>
+                <h2 class = "title_class">Aptidões Técnicas</h2>
+                <div class = "container">
+                    {%for skills in skill %}
+                    {%if skills.skill_number == 2%}
+                    <div class = "skills_container">
+                        <h1 class = "title_skills">{{skills.title}}</h1>
+                        <p class = "text_skills">{{skills.text}}</p>
+                    </div>
+                    {%endif%}
+                    {%endfor%}
+                </div>
+
+                <h1 class = "pageTitle">Aptidões</h1>
+                <h2 class = "title_class">Aptidões Sociais</h2>
+                <div class = "container">
+                    {%for skills in skill %}
+                    {%if skills.skill_number == 3%}
+                    <div class = "skills_container">
+                        <h1 class = "title_skills">{{skills.title}}</h1>
+                        <p class = "text_skills">{{skills.text}}</p>
+                    </div>
+                    {%endif%}
+                    {%endfor%}
+                </div>
+
+                <h1 class = "pageTitle">Interesses e hobbies</h1>
+                <div class = "container">
+                    {%for interests in interests %}
+                    <div class = "skills_container">
+                        <h1 class = "title_skills">{{interests.name}}</h1>
+                        <p class = "text_interests">{{interests.description}}</p>
+                        <div class = "div_photo">
+                            <img src="{{interests.image.url }}" id="image_school">
+                        </div>
+                    </div>
+                    {%endfor%}
+                </div>
+
+                <script>
+                        const options = {
+                        method: 'GET',
+                        headers: {
+                            'X-RapidAPI-Key': '2b72d570b5msh242965ce55bf2dcp1ee93ejsnffd3720db9c3',
+		'X-RapidAPI-Host': 'trending-words-and-dictionary.p.rapidapi.com'
+	}
+};
+
+fetch('https://trending-words-and-dictionary.p.rapidapi.com/post/cool', options)
+                        .then(response => response.json())
+                        .then(data => {
+                            let getRandomQuote = data.word;
+                            let getPronunciation = data.pronounciation;
+                            document.querySelector('.random').append(getPronunciation);
+
+                        });
+                    </script>
+
+                    <h1 class = "pageTitle">API Alfabeto  Japonês</h1>
+                    <div class = "random">
+                        
+                    </div>
+{% endblock main %}                                             

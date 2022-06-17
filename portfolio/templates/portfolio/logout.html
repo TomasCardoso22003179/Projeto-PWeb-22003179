@@ -1,0 +1,20 @@
+{% extends "portfolio/layout.html" %}
+
+
+{% block main %}
+
+    <h1>Login into Tomás Cardoso's page</h1>
+
+    {% if message %}
+      <p> {{ message }} </p>
+    {% endif %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Put in your username, ex: a22003179">
+        <input type="password" name="password" placeholder="Put in your password, ex: qwerty123">
+        <input type="submit" value="Login">
+    </form>  
+
+
+{% endblock main %}

@@ -1,0 +1,14 @@
+{% extends 'portfolio/layout.html' %}
+    {% block main %}
+    <h3 class = "pageTitle">Subject</h3>
+    <div class="container">
+        <form action="{% url 'portfolio:edit_subject' subject_id%}" method="POST">
+            <div>
+                {% csrf_token %}
+                {{ form.as_p }}
+            </div>
+            <a href="{% url 'portfolio:about_me' %}" role="button">Cancelar</a>
+            <input type="submit" value="Gravar">
+        </form>
+    </div>
+    {% endblock %}

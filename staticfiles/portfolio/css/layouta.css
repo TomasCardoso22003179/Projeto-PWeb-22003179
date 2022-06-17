@@ -1,0 +1,194 @@
+* {
+    padding: 0; 
+    margin: 0;
+    box-sizing:border-box;
+    font-family: sans-serif;
+    }
+
+    header {
+    height: 10vh; 
+    background: purple;
+    color: white;
+    top: 0;  
+    
+    /* alinhando logo e menu */
+    display:flex;
+    justify-content: space-between;  
+    align-items: center;
+    }
+
+    header div {
+    font-size: 2em;  
+    padding: 1em;
+    }
+
+    header nav {
+    display:flex;
+    justify-contents: flex-end;  
+    }
+
+    nav a {
+    padding: 0 1em;
+    text-decoration: none;
+    font-size: 1rem;
+    color: lightgray;
+    }
+
+    main {
+    height: 85vh;
+    background-color:grey;
+    padding: 4em 4em;
+    }
+
+    footer {
+    height:5vh;
+    display:flex;
+    justify-content: flex-end;
+    padding: 0 2vw;
+    align-items: center;
+    }
+    .container {
+        background-color: rgb(238, 248, 248);
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        padding: 25px 100px; 
+      }
+      
+      .container div {
+        float: left;
+        width: 250px;   height: 150px;
+        padding: 25px;  margin: 10px;
+        background-color: white;  
+        border-radius: 10px;                 /* arredonda os cantos */
+        box-shadow: 5px 5px 15px grey;
+      }
+      
+      .after-box {
+        clear: left;
+        background-color: skyblue;
+      }
+
+      * {
+        padding: 0; 
+        margin: 0;
+        font-family: sans-serif;
+      }
+      
+      
+      body > * {  
+        /* centrando o <p> dos divs */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3em;
+      }
+      
+      /* div "menu" */
+      header {
+        /* O menu está sticky e ocupa 10vh da altura do viewport */
+        height: 10vh; 
+        background: black;
+        color: white;
+        position: sticky;
+        top: 0;  
+        
+        display:flex;
+        justify-content: space-between;  
+      }
+      
+      nav {
+        display:flex;
+        justify-contents: flex-end;  
+      }
+      
+      
+      nav a {
+        display:block;
+        padding: 0 1em;
+        text-decoration: none;
+        font-size: 1rem;
+        color: white
+      }
+      
+      
+      main {
+        /* como o menu ocupa 10vh, este tem 90vh para o vermo inteiro. */
+        height: 90vh;
+        background-image: url("https://images.unsplash.com/photo-1459213599465-03ab6a4d5931?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1MTAxNTA2MA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+      }
+      
+      
+      main > p {
+        font-size: 3rem;
+      }
+      
+      article.primeiro {
+        /* definindo altura e cor */
+        height: 90vh;
+        background: orange;
+        padding: 0 4vw;
+        text-align: center;
+        font-size: 2rem;
+      }
+      
+      
+      article.segundo {
+        /* como tem menu e rodapé visíveis (10vh cada), define-se como altura 80vh. */
+        height: 80vh;
+        background-image: url("https://source.unsplash.com/GB1JI9CLzHs");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        align-items: start;
+      }
+      
+      footer {
+        /* definindo altura e cor */
+        height: 10vh;
+        background: black;
+        color: white;
+      }
+      header p {
+        font-style: italic;
+        color: gray;
+     }
+     
+     
+     body {
+        background-color: royalblue;
+     }
+     
+     
+     .info {
+        font-size: 0.7em;
+        color: lightgray;
+     }
+     
+     
+     main {
+        width: 800px;
+        margin: auto;
+        padding: 10px;
+        background-color: white;
+        border-radius: 6px;
+     }
+     
+     
+     main p {
+        text-align: left;
+        padding: 20px;
+        margin: 10px;
+        color: white;
+        background-color: mediumpurple;
+        border-radius: 3px;
+     }
+     
+     main p:last-child {
+        background-color: darkkhaki;
+     }

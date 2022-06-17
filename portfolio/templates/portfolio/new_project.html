@@ -1,0 +1,14 @@
+{% extends 'portfolio/layout.html' %}
+{% block main %}
+
+
+<h3>Novo Projeto</h3>
+    <form method = "post" enctype="multipart/form-data">
+        <div>
+            {% csrf_token %}
+            {{ form.as_p }}
+        </div>
+        <a href="{% url 'portfolio:project' %}" >Cancelar</a>
+        <input type="submit" value="Gravar">
+    </form>
+{% endblock %}

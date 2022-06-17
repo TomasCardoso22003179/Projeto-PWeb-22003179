@@ -1,0 +1,55 @@
+{% extends 'portfolio/layout.html' %}
+
+{% block main %}
+
+<h1 class="pageTitle">Projetos</h1>
+        <div class= 'container_proj'>
+            {%for projects in project%}  
+            <div class = "project_container">
+                <h2 class = "class_projects">"{{projects.name_of_projects}}"</h2>
+                    <div>
+                        <img src="{{projects.image.url }}" id="images_project">
+                    </div>
+                    <div class = "project_text">
+                        <p>{{projects.year}}</p>
+                        <p>{{projects.description}}</p>
+                    </div>
+                    {%for participant in projects.participants_in_projects.all%}
+                    <div class = "project_participants">
+                      <p>{{participant.name}}</p>
+                      <a href="{{participant.link_linkedin}}"><img src = "https://res.cloudinary.com/dpp5tcpvh/image/upload/v1655081815/portfolio/static/portfolio/images/linkedin_gafdwc.png"></a>
+                    </div>
+                    {%endfor%}
+            </div>
+            {%endfor%}
+        </div>
+            
+
+<h1 class="pageTitle">Trabalhos Final de Curso</h1>
+        <div class= 'container'>
+            {%for tfcs in tfcs%}  
+            <div class = "tfc_container">
+                <a href="{{tfcs.paper}}"><h2 class = "tfc_name">"{{tfcs.title}}"</h2></a>
+                    <div>
+                        <img src="{{tfcs.image.url}}" id="tfc_image">
+                    </div>
+                    <div class = "project_text">
+                        <p>{{tfcs.year}}</p>
+                        <p>{{tfcs.teacher}}</p>
+                    </div>
+                    {%for participant in tfcs.authors.all%}
+                    <div class = "tfc_participants">
+                      <p>{{participant.name}}</p>
+                      <a href="{{tfcs.link_video}}"><img src = "https://res.cloudinary.com/dpp5tcpvh/image/upload/v1655081815/portfolio/static/portfolio/images/linkedin_gafdwc.png"></a>
+                      <a href="{{tfcs.link_github}}"><img src = "https://res.cloudinary.com/dpp5tcpvh/image/upload/v1655081815/portfolio/static/portfolio/images/linkedin_gafdwc.png"></a>
+                    </div>
+                    {%endfor%}
+            </div>
+            {%endfor%}
+        </div>
+
+ 
+
+
+{% endblock %}
+        

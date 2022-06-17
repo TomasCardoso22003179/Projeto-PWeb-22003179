@@ -1,0 +1,375 @@
+* {
+  padding: 0; 
+  margin: 0;
+  font-family: sans-serif;
+}
+
+html{
+background-color: #ebb0a1;
+}
+
+body{
+ height: 100%;
+}
+
+/* div "menu" */
+header {
+  height: 6.5vh; 
+  background: #C32A2A;
+  color: white;
+  position: sticky;
+  z-index: 1;
+  top: 0; 
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 3em;
+  font-style:italic;
+}
+
+.name{
+  justify-content: left;
+}
+
+nav {
+  display:flex;
+  justify-content: flex-end;
+}
+
+.nav_button:hover{
+    color: lightcoral;
+}
+
+.box {
+  height:90vh;
+  background-image: url("https://cdn.mos.cms.futurecdn.net/9QTpESGBXa32D29J77VR3d.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+nav a {
+  display:block;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 30px;
+  color: white;
+}
+
+.backgroundimage{
+  background-image: url(../images/top_esports_arenas_main_o.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height:200vh;
+}
+
+.login{
+  height: 89.7vh;
+}
+.aboutMe { 
+  height: 30vh;
+  background-color: white;
+  padding: 50px;
+  opacity: 75%;
+  font-size: 1.5rem;
+  position:sticky;
+
+}
+main {
+  padding: 0;
+  height: 100%;
+  background-color: #ebb0a1;
+}
+
+
+main > p {
+  font-size: 3rem;
+}
+
+#images_project{
+  height: 400px;
+  width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-bottom: 50px;
+  margin-right: auto;
+}
+
+#divfooter{
+  align-items: center;
+}
+
+
+footer {
+  background: #C32A2A;
+  font-size:35px;
+  display: flex;
+  position:sticky;
+  bottom:0;
+  width:100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#image_school{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.pageTitle {
+  text-align:center;
+  padding-top:40px;
+  padding-bottom: 5vh;
+  font-size:4rem;
+  color:lightcoral;
+}
+
+.year{
+  text-align:center;
+  padding-top:25px;
+  font-size:1.5rem;
+  color:lightcoral;
+}
+#prof_id{
+  font-size: 35px;
+  text-align: left;
+  color: lightcoral;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+#teacher_name{
+  margin-top:20px;
+  margin-bottom: 20px;
+  font-weight:lighter;
+  font-size: 1.5rem;
+}
+.subject_div{
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.subject_description{
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.container{
+  flex-flow: row wrap;
+  position: relative;
+  display: flex;
+  grid-template-columns: auto auto auto auto;
+  height:100%;
+  justify-items: end;
+
+}
+
+.container_proj{
+
+  display: grid;
+  grid-template-columns: auto auto auto;
+  height:100%;
+  row-gap: 30px;
+  
+}
+
+.container_school{
+  background-color: white;
+  height: 400px;
+  width: 400px;
+  display: flex;
+  border: 5px solid rgb(145, 8, 8);
+  justify-content: center;
+  flex-flow: column;
+  box-shadow: 10px 10px 10px grey;
+  padding: 20px 20px 20px 20px;
+  margin:20px;
+}
+
+.blog_div{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  height: 110px;
+  background-color: white;
+  border: 5px solid rgb(145, 8, 8);
+}
+
+.div_school{
+  margin-top: 5rem;
+}
+
+.tfc_name{
+  margin-bottom: 100px;
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  
+}
+.tfc_container{
+  background-color: white;
+  height: 900px;
+  width: 600px;
+  display: flex;
+  border: 5px solid rgb(145, 8, 8);
+  justify-content: center;
+  flex-flow: column;
+  box-shadow: 10px 10px 10px grey;
+  padding: 20px 20px 20px 20px;
+
+  margin:20px;
+}
+.skills_container{
+  background-color: white;
+  height: 450px;
+  width: 450px;
+  border: 5px solid rgb(145, 8, 8);
+  justify-content: center;
+  flex-flow: column;
+  box-shadow: 10px 10px 10px grey;
+  padding: 20px 20px 20px 20px;
+  margin:20px;
+}
+.title_skills{
+  text-align:center;
+  font-size: 3rem;
+  color:lightcoral
+}
+.classes{
+  border: 5px solid rgb(145, 8, 8);
+  background-color: white;
+  height: 650px;
+  width: 450px;
+  box-shadow: 10px 10px 10px lightsalmon;
+  padding: 20px 20px 20px 20px;
+  margin:30px;
+}
+.class_projects{
+  margin-bottom: 100px;
+  font-size: 2.5rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.project_container{
+  border: 5px solid rgb(145, 8, 8);
+  background-color: white;
+  height: 1000px;
+  width: 600px;
+  justify-content: center;
+  flex-flow: column;
+  box-shadow: 10px 10px 10px grey;
+  padding: 20px 20px 20px 20px;
+  margin-left:50px;
+  
+}
+.project_text{
+  margin:20px;
+  text-align: center;
+  font-size: 1rem;
+}
+.project_participants{
+  margin: 50px;
+  text-align: left;
+  font-size: 1.5rem;
+}
+.blog_button{
+  text-decoration: none;
+  background-color: lightcoral;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.blog_button:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+
+.text_interests{
+  margin-top:10%;
+  margin-bottom: 5%;
+  text-align: center;
+  font-size: 1.2rem;
+  color:lightcoral;
+  opacity: 80%;
+}
+.text_skills{
+  margin-top:30%;
+  text-align: center;
+  color:lightcoral;
+  opacity: 60%;
+}
+
+/*buttons*/
+.button_link:link{
+  color:lightcoral;
+  text-decoration: none;
+}
+
+
+.image_social_media{
+  background-color: white;
+  position:relative;
+  height: 50px;
+  width: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button_link:visited{
+  color:grey;
+  text-decoration: none;
+}
+
+.div_contacts{
+  height:89.7vh;
+}
+
+.button_link:hover{
+  color: #C32A2A;
+  text-decoration: none;
+}
+.button_link:active{
+  color:lightcoral;
+  text-decoration: none;
+}
+/*end buttons*/
+/*title*/
+.title_class{
+  text-align: center;
+  padding-bottom: 30px;
+  color:lightcoral;
+  text-decoration: none;
+}
+
+
+.title_class:link{
+  text-align: center;
+  padding-bottom: 30px;
+  color:lightcoral;
+  text-decoration: none;
+}
+/*end title*/
