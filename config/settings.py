@@ -12,7 +12,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 from environs import Env 
+import mimetypes
 
+
+mimetypes.add_type("text/css", ".css", True)
 env = Env()
 env.read_env()
 DEBUG = env.bool("DEBUG", default=False)
